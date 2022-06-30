@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+:root{
+    --DD-primary: rgb(13, 110, 253);
+    /*--DD-mainBG: rgb(240,255,240);*/
+    /*--DD-mainBG: rgb(248,248,255);*/
+    --DD-mainBG: rgb(245,245,245);
+    --DD-grey: #DCDCDC;
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.text-primary{
+    color: var(--DD-primary);
+}
+
+
+html,body{
+    height: 100vh;
+    background: var(--DD-mainBG);
+}
+
+.bodyContainer{
+    height: 100%;
+}
+
+.bodyContainer, .dragArea,.dragBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dragArea {
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 2.5rem;
+}
+
+.dragBox,.dragArea {
+    width: 600px;
+    height: 600px;
+    border-radius: 15px;
+    background: #fff;
+    cursor: auto;
+}
+
+.dragBox>img{
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: scale-down;
+    border-radius: 15px;
+}
+
+.dragBox{
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    border: 2px dashed var(--DD-grey);
+}
+
+.dragBox.active{
+    border: 2px dashed var(--DD-primary);
+}
+
+.icon{
+    font-size: 3rem;
+}
+
+.dragBox>h2,h3 {
+    margin-bottom: .5rem;
+}
+
+#browseButton{
+    cursor: pointer;
+}
+
+.resizerArea{
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
+}
